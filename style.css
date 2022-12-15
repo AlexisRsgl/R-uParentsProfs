@@ -3,6 +3,8 @@
     font-family: 'Ubuntu', sans-serif;
 }
 
+/* Admin */
+
 h1 {
     text-align: center;
 }
@@ -36,7 +38,7 @@ header {
 }
 
 body {
-    background-color: rgb(214, 211, 211) !important;
+    background-color: rgb(230, 230, 230) !important;
 }
 
 .mb-3 {
@@ -55,4 +57,41 @@ body {
 
 .mb-3 select {
     margin-top: 5%;
+}
+
+/* parent/prof */
+
+.title_header {
+    background-color: rgb(255, 182, 47);
+    margin: auto;
+    width: 25%;
+    border-radius: 10px;
+}
+
+.container_form {
+    margin: auto;
+    width: 25%;
+    background-color: rgb(255, 182, 47);
+    border-radius: 10px;
+}
+
+.mb-3_pp {
+    padding-top: 5%;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.mb-3_pp select {
+    margin-top: 5%;
+}
+
+.login_btn {
+    padding-top: 10%;
+    padding-bottom: 5%;
+    margin: auto;
+    text-align: center;
+}
+
+.login_btn button:hover {
+    background-color: rgb(87, 87, 87);
 }
