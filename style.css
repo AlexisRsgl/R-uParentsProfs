@@ -8,6 +8,12 @@
 h1 {
     text-align: center;
 }
+
+h3 {
+    text-align: center;
+    padding-bottom: 1%;
+}
+
 .widht_block{
     width: 25%;
     height: 500px;
@@ -37,6 +43,10 @@ header {
     height: 50px;
 }
 
+#btn_crea:hover {
+    background-color: blueviolet;
+}
+
 body {
     background-color: rgb(230, 230, 230) !important;
 }
@@ -55,6 +65,10 @@ body {
     margin-top: 5%;
 }
 
+.mb-3 button:hover {
+    background-color: blueviolet;
+}
+
 .mb-3 select {
     margin-top: 5%;
 }
@@ -62,15 +76,31 @@ body {
 /* parent/prof */
 
 .title_header {
-    background-color: rgb(255, 182, 47);
+    background-color: black;
     margin: auto;
-    width: 25%;
+    width: 50%;
     border-radius: 10px;
+}
+
+.title_header h1 {
+    color: rgb(255, 182, 47);
+}
+
+.title_header_profs {
+    background-color: black;
+    margin: auto;
+    width: 80%;
+    border-radius: 10px;
+}
+
+.title_header_profs h3 {
+    color: rgb(255, 182, 47);
+    padding-top: 1%;
 }
 
 .container_form {
     margin: auto;
-    width: 25%;
+    width: 50%;
     background-color: rgb(255, 182, 47);
     border-radius: 10px;
 }
@@ -94,4 +124,25 @@ body {
 
 .login_btn button:hover {
     background-color: rgb(87, 87, 87);
+    color: white;
+}
+
+.prof_choice_btn {
+    margin: auto;
+    text-align: center;
+}
+
+.prof_choice_btn button:hover {
+    background-color: rgb(255, 182, 47);
+    color: black;
+}
+
+.list_prof {
+    width: 80%;
+    margin: auto;
+}
+
+.list-group-item {
+    background-color: rgb(255, 182, 47) !important;
+    margin-top: 1%;
 }

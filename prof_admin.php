@@ -34,6 +34,7 @@ if (!empty($_POST['nomprof']) && ($_POST['ID_etatcivile']) && $_POST['ID_bureau'
   </div>
   </header>
   <body>
+    <h3>Création d'un professeur</h3>
       <form method="post">
     <div class="mb-3">
   <input type="text" class="form-control" aria-label="Text input with checkbox" name="nomprof" placeholder="Nom du professeur">

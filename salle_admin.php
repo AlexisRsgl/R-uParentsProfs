@@ -29,6 +29,7 @@ if (!empty($_POST['salle']) && !empty($_POST['bureau'])){
   </div>
   </header>
   <body>
+    <h3>Création d'une salle et bureau</h3>
 <form method="post">
 <div class="mb-3">
     <input type="text" name="salle" class="form-control" placeholder="Numéro de la salle">

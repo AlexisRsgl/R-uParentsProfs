@@ -3,7 +3,7 @@ require 'configadmin.php';
 
 $classes = $dbh->query('SELECT * FROM classe');
 
-if (!empty($_POST['nom']) && !empty($_POST['prenom'])){
+if (!empty($_POST['nom']) && !empty($_POST['prenom']) && !empty($_POST['ID_classe'])){
   $nom=$_POST['nom'];
   $prenom=$_POST['prenom'];
   $ip_add = $_SERVER['REMOTE_ADDR'];
@@ -11,7 +11,7 @@ if (!empty($_POST['nom']) && !empty($_POST['prenom'])){
 
   $inscription = $dbh->prepare('INSERT INTO eleve(Nom,Prenom,AdressIP,ID_classe) value (?,?,?,?) ');
   $inscription->execute([$nom,$prenom,$ip_add,$classe]);
-  header('Location: prof_choice .php');
+  header('Location: prof_choice.php');
   exit();
 }
 ?>

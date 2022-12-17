@@ -28,6 +28,7 @@ if (!empty($_POST['matiere']) ){
   </div>
   </header>
   <body>
+    <h3>Création d'une matière</h3>
 <form method="post">
 <div class="mb-3">
     <input type="text" name="matiere" class="form-control" placeholder="Nom de la matière">   

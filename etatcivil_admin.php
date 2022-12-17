@@ -1,13 +1,14 @@
 <?php 
 require 'configadmin.php';
 
-if (!empty($_POST['classe']) ){
-  $classe=$_POST['classe'];
+if (!empty($_POST['Desgnation']) && !empty($_POST['DesgnationCrt'])){
+  $designation=$_POST['Desgnation'];
+  $designation_crt=$_POST['Desgnation'];
 
-  $inscription = $dbh->prepare('INSERT INTO classe(ID_classe) value (?) ');
-  $inscription->execute([$classe]);
-}  
-?>
+  $inscription = $dbh->prepare('INSERT INTO etat_civile(Desgnation,DesgnationCrt) value (?,?) ');
+  $inscription->execute([$designation,$designation_crt]);
+}
+  ?>
 
 <!doctype html>
 <html lang="en">
@@ -15,7 +16,7 @@ if (!empty($_POST['classe']) ){
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="img/admin_logo.png"/>
-    <title>Classe BackOffice</title>
+    <title>Etat civil BackOffice</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;500;600;700&family=Ubuntu:wght@300;400;500&display=swap" rel="stylesheet">
@@ -28,13 +29,16 @@ if (!empty($_POST['classe']) ){
   </div>
   </header>
   <body>
-    <h3>Création d'une classe</h3>
+    <h3>Création d'un état civil</h3>
 <form method="post">
 <div class="mb-3">
-    <input type="text" name="classe" class="form-control" placeholder="Nom de la classe">   
+    <input type="text" name="Desgnation" class="form-control" placeholder="Designation">
+</div> 
+<div class="mb-3">
+    <input type="text" name="DesgnationCrt" class="form-control" placeholder="Designation abrégée">   
   <button type="submit" class="btn btn-primary">Ajouter</button>
-  </div> 
+</div>
 </form>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
   </body>
 </html>
