@@ -4,9 +4,14 @@ require 'configadmin.php';
 if (!empty($_POST['classe']) ){
   $classe=$_POST['classe'];
 
-  $inscription = $dbh->prepare('INSERT INTO classe(ID_classe) value (?) ');
-  $inscription->execute([$classe]);
-}  
+  if(!empty($classe)) {
+    $inscription = $dbh->prepare('INSERT INTO classe(ID_classe) value (?) ');
+    $inscription->execute([$classe]);
+    $classe_add = "La classe a bien été ajoutée";
+  }
+}
+
+
 ?>
 
 <!doctype html>
@@ -31,7 +36,16 @@ if (!empty($_POST['classe']) ){
     <h3>Création d'une classe</h3>
 <form method="post">
 <div class="mb-3">
-    <input type="text" name="classe" class="form-control" placeholder="Nom de la classe">   
+    <input type="text" name="classe" class="form-control" placeholder="Nom de la classe"> 
+    <?php
+    if(isset($classe_add))
+    {
+      ?>
+      <div class="bg-success p-2 text-dark bg-opacity-25"><?php echo $classe_add; ?></div>
+      <?php 
+      unset($classe_add);
+    }
+    ?>
   <button type="submit" class="btn btn-primary">Ajouter</button>
   </div> 
 </form>
